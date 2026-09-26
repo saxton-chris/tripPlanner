@@ -1,0 +1,10 @@
+# Only site/ is published; everything else in the repo (e.g. tools/) is never deployed.
+[build]
+  publish = "site"
+
+# Until there's a homepage, send visitors at the root to the inquiry form.
+# Netlify skips this rule automatically once site/index.html exists.
+[[redirects]]
+  from = "/"
+  to = "/contact.html"
+  status = 302
